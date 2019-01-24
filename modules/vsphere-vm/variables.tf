@@ -55,7 +55,7 @@ variable "vsphere_vm_disk_size" {
 variable "vsphere_vm_template" {
   description = "Template the VM is based on."
   type = "string"
-  default = "templates/ubuntu-server-16.04-template"
+  default = "templates/ubuntu-server-bionic"
 }
 
 variable "vsphere_vm_domain" {
