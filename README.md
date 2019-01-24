@@ -3,7 +3,7 @@
 This is a test/example of how to bring up a server and configure networking on 
 a VMware host using [Terraform](https://terraform.io).
 
-Terraform will prompt for credentials if not provided (because we ), but the prompt is in
+Terraform will prompt for credentials if not provided, but the prompt is in
 plain text. A better option is to export credentials to the environment. For
 convenience, the script `setauth.sh` is provided. Run `source ./setauth.sh`
 to be prompted for credentials.
