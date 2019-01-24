@@ -7,6 +7,10 @@ resource "vsphere_virtual_machine" "vm" {
   memory           = "${var.vsphere_vm_memory}"
   guest_id         = "${var.vsphere_vm_guest_id}"
 
+  // Network provisioning options. Don't wait for the guest to get an IP address
+  wait_for_guest_net_timeout = -1
+  wait_for_guest_net_routable = false
+
   network_interface {
     network_id     = "${data.vsphere_network.network.id}"
   }
@@ -14,6 +18,23 @@ resource "vsphere_virtual_machine" "vm" {
   disk {
     label          = "disk0"
     size           = "${var.vsphere_vm_disk_size}"
+  }
+
+  clone {
+
+    template_uuid = "${data.vsphere_virtual_machine.template.id}"
+
+    customize {
+
+      linux_options {
+        domain = "${var.vsphere_vm_domain}"
+        host_name = "${var.vsphere_vm_name}"
+      }
+
+      network_interface {}
+
+    }
+
   }
 
 }

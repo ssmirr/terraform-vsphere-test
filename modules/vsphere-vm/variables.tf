@@ -19,7 +19,7 @@ variable "vsphere_resource_pool" {
 variable "vsphere_network" {
   description = "Network for VMware vSphere."
   type = "string"
-  default = "EB2-CSC-RESEARCH-1-Public"
+  default = "NAT"
 }
 
 variable "vsphere_vm_name" {
@@ -43,11 +43,23 @@ variable "vsphere_vm_memory" {
 variable "vsphere_vm_guest_id" {
   description = "ID of the VMware vSphere virtual machine or template."
   type = "string"
-  default = "other3xLinux64Guest"
+  default = "ubuntu64Guest"
 }
 
 variable "vsphere_vm_disk_size" {
   description = "Size of the VMware vSphere virtual machine disk."
   type = "string"
   default = "20"
+}
+
+variable "vsphere_vm_template" {
+  description = "Template the VM is based on."
+  type = "string"
+  default = "templates/ubuntu-server-16.04-template"
+}
+
+variable "vsphere_vm_domain" {
+  description = "Network domain name."
+  type = "string"
+  default = "csc.ncsu.edu"
 }

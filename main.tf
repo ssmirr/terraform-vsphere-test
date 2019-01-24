@@ -38,6 +38,6 @@ module "vsphere-vm" {
   source = "./modules/vsphere-vm"
 
   // Override module variable defaults
-  vsphere_vm_name = "ewhorton-pfsense-test"
+  vsphere_vm_name = "ewhorton-test"
 
 }
