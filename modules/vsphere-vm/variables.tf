@@ -37,7 +37,7 @@ variable "vsphere_vm_cpus" {
 variable "vsphere_vm_memory" {
   description = "Amount of memory (in MB) given to the VMware vSphere virtual machine."
   type = "string"
-  default = "1024"
+  default = "8192"
 }
 
 variable "vsphere_vm_guest_id" {

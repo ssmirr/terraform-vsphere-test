@@ -32,13 +32,13 @@ provider "vsphere" {
 }
 
 
-module "vsphere-vm" {
+module "ewhorton-test" {
 
   // Module source
   source = "./modules/vsphere-vm"
 
   // Override module variable defaults
-  vsphere_vm_name = "ewhorton-test-2"
-  vsphere_vm_template = "templates/ubuntu-template-2"
+  vsphere_vm_name = "ewhorton-test"
+  vsphere_vm_template = "templates/ubuntu-template-5"
 
 }
