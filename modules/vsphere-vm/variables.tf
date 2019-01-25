@@ -49,13 +49,13 @@ variable "vsphere_vm_guest_id" {
 variable "vsphere_vm_disk_size" {
   description = "Size of the VMware vSphere virtual machine disk."
   type = "string"
-  default = "20"
+  default = "32"
 }
 
 variable "vsphere_vm_template" {
   description = "Template the VM is based on."
   type = "string"
-  default = "templates/ubuntu-server-bionic"
+  default = "templates/ubuntu-server-18.04.1-bionic"
 }
 
 variable "vsphere_vm_domain" {

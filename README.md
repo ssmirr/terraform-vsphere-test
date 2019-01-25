@@ -40,3 +40,5 @@ Then add the following to `/lib/systemd/system/open-vm-tools.service`.
 ```
 After=dbus.service
 ```
+
+Also, a convenient way to disable the [floppy drive](https://tinycp.com/community/show/solved-print-req-error-i-o-error-dev-fd0-sector-0,43.html).
