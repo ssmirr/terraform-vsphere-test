@@ -19,7 +19,7 @@ variable "vsphere_resource_pool" {
 variable "vsphere_network" {
   description = "Network for VMware vSphere."
   type = "string"
-  default = "NAT"
+  default = "DevOps"
 }
 
 variable "vsphere_vm_name" {
@@ -55,11 +55,35 @@ variable "vsphere_vm_disk_size" {
 variable "vsphere_vm_template" {
   description = "Template the VM is based on."
   type = "string"
-  default = "templates/ubuntu-server-18.04.1-bionic"
+  default = "templates/ubuntu-server-16.04.5-xenial"
 }
 
 variable "vsphere_vm_domain" {
   description = "Network domain name."
   type = "string"
   default = "csc.ncsu.edu"
+}
+
+// Provider
+
+# variable "vsphere_user" {
+#   description = "Username used to authenticate to VMware vSphere."
+#   type = "string"
+# }
+
+# variable "vsphere_password" {
+#   description = "Password used to authenticate to VMware vSphere."
+#   type = "string"
+# }
+
+variable "vsphere_server" {
+  description = "Hostname of VMware vSphere server."
+  type = "string"
+  default = "vcsa04.csc.ncsu.edu"
+}
+
+variable "vsphere_allow_unverified_ssl" {
+  description = "Allow unverified SSL. Use if you have a self-signed certificate."
+  type = "string"
+  default = "true"
 }
